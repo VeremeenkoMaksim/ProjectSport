@@ -4,9 +4,8 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{86DF32FA-63F2-4459-9A88-35DB76106FA4}" Name="RequirementsModel_1" OpenedReadOnly="Yes" Selected="Yes" Type="{DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33}" URL="RequirementsModel_111 (1).rqm"/>
-		<Model Expanded="Yes" ID="{843E137E-C289-4136-8FBC-2C1B5E914668}" Loaded="No" Name="ObjectOrientedModel_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ObjectOrientedModel_1.oom"/>
-		<Model Expanded="Yes" ID="{EBF04A8E-E33F-44AD-AA26-6AFD8C72E999}" Loaded="No" Name="StateChart Diagram" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="StateChart Diagram.oom"/>
+		<Model Expanded="Yes" ID="{86DF32FA-63F2-4459-9A88-35DB76106FA4}" Name="RequirementsModel_1" OpenedReadOnly="Yes" Type="{DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33}" URL="RequirementsModel_111 (1).rqm"/>
+		<Model Expanded="Yes" ID="{EBF04A8E-E33F-44AD-AA26-6AFD8C72E999}" Name="StateChart Diagram" OpenedReadOnly="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="StateChart Diagram.oom"/>
 		<Model Expanded="Yes" ID="{BCBB35D5-2DC2-43E8-AB87-63314D01E1A5}" Name="ObjectOrientedModel_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ObjectOrientedModel_2.oom"/>
 		<Model Expanded="Yes" ID="{C5D0FDE2-BBA4-4AE2-B2E8-A40236C6B46F}" Name="EnterpriseArchitectureModel_1" Type="{5215C79E-A9A1-4738-A627-36DA432EFE29}" URL="EnterpriseArchitectureModel_1.eam"/>
 	</Local>
