@@ -8,12 +8,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SUDS
 {
-    class Sportsman
+    class Sportsman : Person
     {
         [Key]
-        private int SportsmanId { get; set; }
-        private string name { get; set; }
-        private string surname {get; set;}
-        private string middleName { get; set;}
+        private int sportsmanId { get; set; }
+        private int weight { get; set; }
+        private int height { get; set; }
+
     }
 }
