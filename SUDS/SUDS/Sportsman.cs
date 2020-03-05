@@ -10,10 +10,9 @@ namespace SUDS
 {
     class Sportsman : Person
     {
-        [Key]
-        private int sportsmanId { get; set; }
-        private int weight { get; set; }
-        private int height { get; set; }
+        public int Id { get; set; }
+        public int Weight { get; set; }
+        public int Height { get; set; }
 
     }
 }

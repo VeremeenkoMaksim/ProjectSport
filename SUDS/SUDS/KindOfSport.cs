@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SUDS
 {
     class KindOfSport
     {
-        private string nameOfSport { get; set; }
-        private ICollection<string> category { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public string NameOfSport { get; set; }
+        public ICollection<string> Category { get; set; }
 
     }
 }

@@ -8,15 +8,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SUDS
 {
-    class Result
+    class CompetitionSponsors
     {
-        public int Id { get; set; }
+        public int SponsorId { get; set; }
+        [ForeignKey("SponsorId")]
+        public User Sponsor { get; set; }
+
         public int CompetitionId { get; set; }
         [ForeignKey("CompetitionId")]
         public Competition Competition { get; set; }
-        public Sportsman Sportsman { get; set; }
-        public int Place { get; set; }
-        public string Category { get; set; }
-
     }
 }

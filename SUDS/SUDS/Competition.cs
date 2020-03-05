@@ -8,14 +8,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SUDS
 {
+    public enum CompetitionType {standard, forDisabilties }
     class Competition
     {
         [Key]
-        private int competitionId { get; set; }
-        private DateTime date { get; set; }
-        private KindOfSport kindOfSport {get; set;}
-        private User judge { get; set; }
-
-
+        public int Id { get; set; }
+        public DateTime Date { get; set; }
+        public KindOfSport KindOfSport { get; set; }
+        public ICollection<CompetitionJudges> Judges { get; set; }
+        public ICollection<Result> Results { get; set; }
+        public ICollection<CompetitionSponsors> Sponsor { get; set; }
     }
 }
