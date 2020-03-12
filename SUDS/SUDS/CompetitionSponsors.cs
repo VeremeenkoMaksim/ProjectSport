@@ -10,6 +10,8 @@ namespace SUDS
 {
     class CompetitionSponsors
     {
+        [Key]
+        public int Id { get; set; }
         public int SponsorId { get; set; }
         [ForeignKey("SponsorId")]
         public User Sponsor { get; set; }
