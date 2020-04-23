@@ -54,34 +54,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddKindOfSport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddKindOfSport.Designer.cs">
+      <DependentUpon>AddKindOfSport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="Competition.cs" />
     <Compile Include="CompetitionJudges.cs" />
     <Compile Include="CompetitionSponsors.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="KindOfSportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="KindOfSportForm.Designer.cs">
+      <DependentUpon>KindOfSportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="KindOfSport.cs" />
     <Compile Include="Migrations\202003120142484_First.cs" />
     <Compile Include="Migrations\202003120142484_First.designer.cs">
       <DependentUpon>202003120142484_First.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004220828378_TestMigration.cs" />
+    <Compile Include="Migrations\202004220828378_TestMigration.designer.cs">
+      <DependentUpon>202004220828378_TestMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result.cs" />
+    <Compile Include="SelectCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCategories.Designer.cs">
+      <DependentUpon>SelectCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sportsman.cs" />
     <Compile Include="SudsDb.cs" />
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AddKindOfSport.resx">
+      <DependentUpon>AddKindOfSport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KindOfSportForm.resx">
+      <DependentUpon>KindOfSportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003120142484_First.resx">
       <DependentUpon>202003120142484_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004220828378_TestMigration.resx">
+      <DependentUpon>202004220828378_TestMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +123,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SelectCategories.resx">
+      <DependentUpon>SelectCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
