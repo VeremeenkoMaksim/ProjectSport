@@ -14,6 +14,7 @@ namespace SUDS
     public partial class SelectCategories : Form
     {
         SudsDb db;
+        public string[] str;
         public SelectCategories()
         {
             InitializeComponent();
@@ -23,13 +24,20 @@ namespace SUDS
         {
             db = new SudsDb();
             db.Categories.Load();
-            var data = from category in db.Categories
-                       select new
-                       {
-                           Название = category.Name,
-                           Тип = category.Type,
-                       };
-            dataGridView1.DataSource = data.ToList();
+            foreach (Category cat in db.Categories) {
+                checkedListBox1.Items.Add(cat.Name);
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            str = new string[checkedListBox1.CheckedItems.Count];
+            int i = 0;
+            foreach (CheckedListBox.CheckedItemCollection ch in checkedListBox1.CheckedItems) {
+                str[i]= ch.ToString();
+                i++;
+            }
         }
     }
 }

@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202004220828378_TestMigration.designer.cs">
       <DependentUpon>202004220828378_TestMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004301146309_Edit_Category.cs" />
+    <Compile Include="Migrations\202004301146309_Edit_Category.designer.cs">
+      <DependentUpon>202004301146309_Edit_Category.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -113,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004220828378_TestMigration.resx">
       <DependentUpon>202004220828378_TestMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004301146309_Edit_Category.resx">
+      <DependentUpon>202004301146309_Edit_Category.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

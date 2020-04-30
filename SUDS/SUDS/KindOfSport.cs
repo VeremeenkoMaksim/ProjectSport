@@ -13,6 +13,6 @@ namespace SUDS
         [Key]
         public int Id { get; set; }
         public string NameOfSport { get; set; }
-        public ICollection<string> Category { get; set; }
+        public Category Category { get; set; }
     }
 }

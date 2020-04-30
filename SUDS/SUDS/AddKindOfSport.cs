@@ -23,25 +23,32 @@ namespace SUDS
         }
         void LoadCategories() {
             SudsDb db = new SudsDb();
-
+           
         }
 
         private void selectCategoryButton_Click(object sender, EventArgs e)
         {
             SelectCategories form = new SelectCategories();
             form.ShowDialog();
+            //form.button1.Click +=
         }
 
         private void Add_Click(object sender, EventArgs e)
         {
+           
             if (textBox1.Text.Replace(" ", "") != "")
             {
                 Boolean exist = false;
                 SudsDb db = new SudsDb();
-
+                Category category = null;
+                foreach (Category cat in db.Categories) {
+                    if (cat.Name.Equals("Легкий вес"))
+                        category = cat;
+                }
                 KindOfSport newData = new KindOfSport()
                 {
-                    NameOfSport = textBox1.Text
+                    NameOfSport = textBox1.Text,
+                    Category = category
                 };
 
                 foreach (KindOfSport ks in db.KindsOfSport)

@@ -27,7 +27,7 @@ namespace SUDS
                        select new
                        {
                            Название = kindOfSport.NameOfSport,
-                          // Категория = kindOfSport.Category,
+                           Категория = kindOfSport.Category.Name,
                        };
             dataGridView1.DataSource = data.ToList();
         }
