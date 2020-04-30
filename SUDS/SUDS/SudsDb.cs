@@ -18,5 +18,7 @@ namespace SUDS
         public DbSet<Result> Results { get; set; }
         public DbSet<Competition> Competitions { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+
     }
 }

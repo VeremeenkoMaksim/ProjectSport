@@ -43,6 +43,7 @@
             this.Add.TabIndex = 0;
             this.Add.Text = "Добавить";
             this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // label1
             // 

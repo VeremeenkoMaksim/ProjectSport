@@ -31,5 +31,41 @@ namespace SUDS
             SelectCategories form = new SelectCategories();
             form.ShowDialog();
         }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Replace(" ", "") != "")
+            {
+                Boolean exist = false;
+                SudsDb db = new SudsDb();
+
+                KindOfSport newData = new KindOfSport()
+                {
+                    NameOfSport = textBox1.Text
+                };
+
+                foreach (KindOfSport ks in db.KindsOfSport)
+                {
+                    if (ks.NameOfSport.Equals(newData.NameOfSport))
+                    {
+                        exist = true;
+                        break;
+                    }
+                }
+                if (!exist)
+                {
+                    db.KindsOfSport.Add(newData);
+                    db.SaveChanges();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Такой вид спорта уже существует.");
+                }
+            }else
+            {
+                MessageBox.Show(null, "Сначала заполните поля", "Ошибка" ,MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
     }
 }
