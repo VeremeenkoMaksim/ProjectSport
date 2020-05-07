@@ -53,6 +53,7 @@
             this.Exit.TabIndex = 1;
             this.Exit.Text = "Назад";
             this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Add
             // 

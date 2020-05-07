@@ -22,7 +22,7 @@ namespace SUDS
         private void KindOfSportForm_Load(object sender, EventArgs e)
         {
              db = new SudsDb();
-            db.KindsOfSport.Load();
+           // db.KindsOfSport.Load();
             var data = from kindOfSport in db.KindsOfSport
                        select new
                        {
@@ -36,6 +36,11 @@ namespace SUDS
         {
             AddKindOfSport form = new AddKindOfSport();
             form.ShowDialog();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

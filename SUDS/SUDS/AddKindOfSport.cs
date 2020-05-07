@@ -12,6 +12,7 @@ namespace SUDS
 {
     public partial class AddKindOfSport : Form
     {
+        string strCategory;
         public AddKindOfSport()
         {
             InitializeComponent();
@@ -29,22 +30,35 @@ namespace SUDS
         private void selectCategoryButton_Click(object sender, EventArgs e)
         {
             SelectCategories form = new SelectCategories();
-            form.ShowDialog();
-            //form.button1.Click +=
-        }
+            form.button1.Click += (senderS, eS) => {
+                strCategory = form.str;
+                //strCategory = form.str;
+                //foreach (string s in strCategory)
+                //{
+                //    label3.Text += s + " ";
+                //}
+                label3.Text = strCategory;
+            };
 
+            form.ShowDialog();
+
+        }
+        
         private void Add_Click(object sender, EventArgs e)
         {
-           
-            if (textBox1.Text.Replace(" ", "") != "")
+            if (textBox1.Text.Replace(" ", "") != "" && strCategory != "")
             {
                 Boolean exist = false;
                 SudsDb db = new SudsDb();
                 Category category = null;
-                foreach (Category cat in db.Categories) {
-                    if (cat.Name.Equals("Легкий вес"))
+                
+                
+                foreach (Category cat in db.Categories)
+                {
+                    if (cat.Name.Equals(strCategory))
                         category = cat;
                 }
+                
                 KindOfSport newData = new KindOfSport()
                 {
                     NameOfSport = textBox1.Text,

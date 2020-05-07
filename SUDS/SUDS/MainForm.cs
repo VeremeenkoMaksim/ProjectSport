@@ -27,5 +27,11 @@ namespace SUDS
             KindOfSportForm form = new KindOfSportForm();
             form.Show();
         }
+
+        private void судьиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            JudgeForm form = new JudgeForm();
+            form.Show();
+        }
     }
 }

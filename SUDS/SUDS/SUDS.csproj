@@ -64,11 +64,23 @@
     <Compile Include="Competition.cs" />
     <Compile Include="CompetitionJudges.cs" />
     <Compile Include="CompetitionSponsors.cs" />
+    <Compile Include="JudgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JudgeForm.Designer.cs">
+      <DependentUpon>JudgeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KindOfSportForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KindOfSportForm.Designer.cs">
       <DependentUpon>KindOfSportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogUpJudge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogUpJudge.Designer.cs">
+      <DependentUpon>LogUpJudge.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,14 @@
     <EmbeddedResource Include="AddKindOfSport.resx">
       <DependentUpon>AddKindOfSport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JudgeForm.resx">
+      <DependentUpon>JudgeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KindOfSportForm.resx">
       <DependentUpon>KindOfSportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogUpJudge.resx">
+      <DependentUpon>LogUpJudge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
