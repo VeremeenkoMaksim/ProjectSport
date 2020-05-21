@@ -184,7 +184,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox loginBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
     }
 }

@@ -110,7 +110,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Add;
+        public System.Windows.Forms.Button Add;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;

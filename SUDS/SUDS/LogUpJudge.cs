@@ -29,12 +29,12 @@ namespace SUDS
                     Surname = surnameBox.Text,
                     Login = loginBox.Text,
                     Password = passwordBox.Text,
-                    DateOfBirth = dateOfBirthBox.Value,
+                    DateOfBirth = dateOfBirthBox.Value.Date,
                     Role = 1
                 };
 
                 foreach (User u in db.Users) {
-                    if (u == newData) {
+                    if (u.Name.Equals(newData.Name) && u.Surname.Equals(newData.Surname)) {
                         exist = true;
                         break;
                     }
