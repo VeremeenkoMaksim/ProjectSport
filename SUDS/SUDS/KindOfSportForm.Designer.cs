@@ -84,6 +84,7 @@
             this.Delete.TabIndex = 4;
             this.Delete.Text = "Удалить";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // button1
             // 

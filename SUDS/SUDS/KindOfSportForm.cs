@@ -75,5 +75,26 @@ namespace SUDS
             dataGridView1.DataSource = data.ToList();
             dataGridView1.Columns[0].Visible = false;
         }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Вы действительно хотите удалить выбранный вид спорта?", "Удалить", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    
+                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                    KindOfSport ks = (from KindOfSport in db.KindsOfSport
+                                      where KindOfSport.Id == id
+                                      select KindOfSport).FirstOrDefault<KindOfSport>();
+                    db.KindsOfSport.Remove(ks);
+                    db.SaveChanges();
+                    loadData();
+                }
+            }
+            else {
+                MessageBox.Show("Выделите строку с видом спорта");
+            }
+        }
     }
 }
