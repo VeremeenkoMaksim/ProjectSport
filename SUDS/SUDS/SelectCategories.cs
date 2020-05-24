@@ -13,7 +13,8 @@ namespace SUDS
 {
     public partial class SelectCategories : Form
     {
-        SudsDb db;
+        public SudsDb db { get; set; }
+        public Category cat { get; set; }
         public string str;
         public SelectCategories()
         {
@@ -22,23 +23,16 @@ namespace SUDS
 
         private void SelectCategories_Load(object sender, EventArgs e)
         {
-            db = new SudsDb();
             db.Categories.Load();
             foreach (Category cat in db.Categories) {
                 comboBox1.Items.Add(cat.Name);
             }
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //str = new string[checkedListBox1.CheckedItems.Count];
-            //int i = 0;
-            //foreach (string ch in checkedListBox1.CheckedItems) {
-            //    str[i]= ch.ToString();
-            //    i++;
-            //}
             str = comboBox1.SelectedItem.ToString();
+            cat = (from Category in db.Categories where Category.Name == str select Category).FirstOrDefault<Category>();
             this.Close();
         }
     }

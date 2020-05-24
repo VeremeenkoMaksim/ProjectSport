@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SUDS
 {
-    class Sportsman : Person
+    public class Sportsman : Person
     {
         public int Id { get; set; }
         public int Weight { get; set; }

@@ -9,7 +9,7 @@ namespace SUDS
 {
     public enum Type { weight, age, rank }
 
-    class Category
+    public class Category
     {
         [Key]
         public int Id { get; set; }

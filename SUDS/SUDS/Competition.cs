@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SUDS
 {
     public enum CompetitionType {standard, forDisabilties }
-    class Competition
+    public class Competition
     {
         [Key]
         public int Id { get; set; }

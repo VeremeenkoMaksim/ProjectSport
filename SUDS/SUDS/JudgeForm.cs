@@ -12,7 +12,7 @@ namespace SUDS
 {
     public partial class JudgeForm : Form
     {
-        SudsDb db;
+        public SudsDb db { get; set; }
         public JudgeForm()
         {
             InitializeComponent();
@@ -23,7 +23,15 @@ namespace SUDS
             LogUpJudge form = new LogUpJudge();
             form.button1.Click += (senderS, eS) =>
             {
-                
+                var data = from User in db.Users
+                           where User.Role == 1
+                           select new
+                           {
+                               Имя = User.Name,
+                               Фамилия = User.Surname,
+                               Дата_рождения = User.DateOfBirth
+                           };
+                dataGridView1.DataSource = data.ToList();
             };
             form.Show();
 
@@ -31,29 +39,16 @@ namespace SUDS
 
         private void JudgeForm_Load(object sender, EventArgs e)
         {
-            db = new SudsDb();
-            //var data = from judge in db.Users
-            //           select new
-            //           {
-            //               Имя = judge.Name,
-            //               Фамилия = judge.Surname,
-            //               Дата_рождения = judge.DateOfBirth
-            //           };
-
-            //dataGridView1.DataSource = data.ToList();
-            dataGridView1.ColumnCount = 3;
-            dataGridView1.Columns[0].Name = "Имя";
-            dataGridView1.Columns[1].Name = "Фамилиия";
-            dataGridView1.Columns[2].Name = "Дата рождения";
-
-            foreach (User u in db.Users)
-            {
-                if (u.Role == 1)
-                {
-                    string[] str = { u.Name, u.Surname, u.DateOfBirth.ToString() };
-                    dataGridView1.Rows.Add(str);
-                }
-            }
+            var data = from User in db.Users
+                       where User.Role == 1
+                       select new
+                       {
+                           Имя = User.Name,
+                           Фамилия = User.Surname,
+                           Дата_рождения = User.DateOfBirth
+                       };
+            dataGridView1.DataSource = data.ToList();
+            
         }
 
         private void Exit_Click(object sender, EventArgs e)

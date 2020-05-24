@@ -12,6 +12,7 @@ namespace SUDS
 {
     public partial class AddKindOfSport : Form
     {
+        public SudsDb db { get; set; }
         string strCategory;
         public AddKindOfSport()
         {
@@ -20,23 +21,15 @@ namespace SUDS
 
         private void AddKindOfSport_Load(object sender, EventArgs e)
         {
-            LoadCategories();
-        }
-        void LoadCategories() {
-            SudsDb db = new SudsDb();
-           
+            
         }
 
         private void selectCategoryButton_Click(object sender, EventArgs e)
         {
             SelectCategories form = new SelectCategories();
+            form.db = db;
             form.button1.Click += (senderS, eS) => {
                 strCategory = form.str;
-                //strCategory = form.str;
-                //foreach (string s in strCategory)
-                //{
-                //    label3.Text += s + " ";
-                //}
                 label3.Text = strCategory;
             };
 
@@ -49,7 +42,6 @@ namespace SUDS
             if (textBox1.Text.Replace(" ", "") != "" && strCategory != "")
             {
                 Boolean exist = false;
-                SudsDb db = new SudsDb();
                 Category category = null;
                 
                 
