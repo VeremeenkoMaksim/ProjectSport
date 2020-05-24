@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace SUDS
 {
-     class SudsDb : DbContext
+    public class SudsDb : DbContext
     {
         public SudsDb()
             :base("DBConnection")

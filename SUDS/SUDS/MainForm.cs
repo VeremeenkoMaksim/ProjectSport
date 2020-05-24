@@ -33,7 +33,8 @@ namespace SUDS
         private void судьиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             JudgeForm form = new JudgeForm();
-            form.Show();
+            form.db = db;
+            form.ShowDialog();
         }
     }
 }

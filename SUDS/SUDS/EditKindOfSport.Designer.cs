@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
+            this.CategoryLabel = new System.Windows.Forms.Label();
             this.selectCategoryButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NameBox = new System.Windows.Forms.TextBox();
             this.Apply = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label3
+            // CategoryLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(150, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 15;
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Location = new System.Drawing.Point(150, 96);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(0, 13);
+            this.CategoryLabel.TabIndex = 15;
             // 
             // selectCategoryButton
             // 
@@ -53,6 +53,7 @@
             this.selectCategoryButton.TabIndex = 14;
             this.selectCategoryButton.Text = "Выбрать";
             this.selectCategoryButton.UseVisualStyleBackColor = true;
+            this.selectCategoryButton.Click += new System.EventHandler(this.selectCategoryButton_Click);
             // 
             // label2
             // 
@@ -72,12 +73,12 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Название:";
             // 
-            // textBox1
+            // NameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 20);
-            this.textBox1.TabIndex = 11;
+            this.NameBox.Location = new System.Drawing.Point(100, 24);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(209, 20);
+            this.NameBox.TabIndex = 11;
             // 
             // Apply
             // 
@@ -87,6 +88,7 @@
             this.Apply.TabIndex = 10;
             this.Apply.Text = "Применить";
             this.Apply.UseVisualStyleBackColor = true;
+            this.Apply.Click += new System.EventHandler(this.Apply_Click);
             // 
             // Cancel
             // 
@@ -104,11 +106,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 162);
             this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.selectCategoryButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NameBox);
             this.Controls.Add(this.Apply);
             this.Name = "EditKindOfSport";
             this.Text = "EditKindOfSport";
@@ -120,11 +122,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label CategoryLabel;
         private System.Windows.Forms.Button selectCategoryButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NameBox;
         public System.Windows.Forms.Button Apply;
         public System.Windows.Forms.Button Cancel;
     }
