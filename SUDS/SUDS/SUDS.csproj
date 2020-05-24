@@ -64,6 +64,12 @@
     <Compile Include="Competition.cs" />
     <Compile Include="CompetitionJudges.cs" />
     <Compile Include="CompetitionSponsors.cs" />
+    <Compile Include="EditJudge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditJudge.Designer.cs">
+      <DependentUpon>EditJudge.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditKindOfSport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AddKindOfSport.resx">
       <DependentUpon>AddKindOfSport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditJudge.resx">
+      <DependentUpon>EditJudge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditKindOfSport.resx">
       <DependentUpon>EditKindOfSport.cs</DependentUpon>

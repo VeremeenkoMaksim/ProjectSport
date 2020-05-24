@@ -63,6 +63,7 @@
             this.Edit.TabIndex = 9;
             this.Edit.Text = "Редактировать";
             this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Add
             // 
