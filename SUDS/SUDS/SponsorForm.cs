@@ -62,5 +62,26 @@ namespace SUDS
             }
 
         }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Вы действительно хотите удалить выбранного организатора?", "Удалить", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                    User sp = (from User in db.Users
+                               where User.Id == id
+                               select User).FirstOrDefault<User>();
+                    db.Users.Remove(sp);
+                    db.SaveChanges();
+                    loadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выделите строку с видом спорта");
+            }
+        }
     }
 }
