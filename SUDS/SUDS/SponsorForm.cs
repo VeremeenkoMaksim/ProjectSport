@@ -20,7 +20,10 @@ namespace SUDS
 
         private void Add_Click(object sender, EventArgs e)
         {
-            
+            LogUpSponsor form = new LogUpSponsor();
+            form.db = db;
+            form.ShowDialog();
+            loadData();
         }
 
         private void SponsorForm_Load(object sender, EventArgs e)

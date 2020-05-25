@@ -21,6 +21,7 @@ namespace SUDS
         private void Add_Click(object sender, EventArgs e)
         {
             LogUpJudge form = new LogUpJudge();
+            form.db = db;
             form.button1.Click += (senderS, eS) =>
             {
                 loadData();
