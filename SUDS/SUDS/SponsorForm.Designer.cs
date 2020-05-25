@@ -72,6 +72,7 @@
             this.Add.TabIndex = 8;
             this.Add.Text = "Добавить";
             this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Exit
             // 
@@ -103,6 +104,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "SponsorForm";
             this.Text = "SponsorForm";
+            this.Load += new System.EventHandler(this.SponsorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

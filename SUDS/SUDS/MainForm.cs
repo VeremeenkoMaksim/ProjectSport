@@ -36,5 +36,12 @@ namespace SUDS
             form.db = db;
             form.ShowDialog();
         }
+
+        private void организаторыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SponsorForm form = new SponsorForm();
+            form.db = db;
+            form.ShowDialog();
+        }
     }
 }

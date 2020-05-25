@@ -77,6 +77,7 @@
             this.организаторыToolStripMenuItem.Name = "организаторыToolStripMenuItem";
             this.организаторыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.организаторыToolStripMenuItem.Text = "Организаторы";
+            this.организаторыToolStripMenuItem.Click += new System.EventHandler(this.организаторыToolStripMenuItem_Click);
             // 
             // судьиToolStripMenuItem
             // 

@@ -124,6 +124,12 @@
     <Compile Include="SelectCategories.Designer.cs">
       <DependentUpon>SelectCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="SponsorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SponsorForm.Designer.cs">
+      <DependentUpon>SponsorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sportsman.cs" />
     <Compile Include="SudsDb.cs" />
     <Compile Include="User.cs" />
@@ -168,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="SelectCategories.resx">
       <DependentUpon>SelectCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SponsorForm.resx">
+      <DependentUpon>SponsorForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
