@@ -43,5 +43,24 @@ namespace SUDS
             dataGridView1.DataSource = data.ToList();
             dataGridView1.Columns[0].Visible = false;
         }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            EditSponsor form = new EditSponsor();
+            form.db = db;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                User sp = (from User in db.Users where User.Id == id select User).FirstOrDefault<User>();
+                form.sp = sp;
+                form.ShowDialog();
+                loadData();
+            }
+            else
+            {
+                MessageBox.Show("Выделите строку с судьей");
+            }
+
+        }
     }
 }
