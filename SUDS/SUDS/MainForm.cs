@@ -13,6 +13,8 @@ namespace SUDS
     public partial class MainForm : Form
     {
         public SudsDb db { get; set; }
+        public User user { get; set; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -21,6 +23,11 @@ namespace SUDS
         private void Form1_Load(object sender, EventArgs e)
         {
             db = new SudsDb();
+            Authorization form = new Authorization();
+            form.db = db;
+            form.ShowDialog();
+            user = form.user;
+            label1.Text = user.Surname + " " + user.Name + " " + user.Role;
         }
 
         private void видыСпортаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,6 +49,13 @@ namespace SUDS
             SponsorForm form = new SponsorForm();
             form.db = db;
             form.ShowDialog();
+        }
+
+        private void соревнованияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CompetitionForm form = new CompetitionForm();
+            form.db = db;
+            form.Show();
         }
     }
 }

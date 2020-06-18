@@ -54,16 +54,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCompetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCompetition.Designer.cs">
+      <DependentUpon>AddCompetition.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddKindOfSport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddKindOfSport.Designer.cs">
       <DependentUpon>AddKindOfSport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="Competition.cs" />
+    <Compile Include="CompetitionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompetitionForm.Designer.cs">
+      <DependentUpon>CompetitionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompetitionJudges.cs" />
     <Compile Include="CompetitionSponsors.cs" />
+    <Compile Include="EditCompetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCompetition.Designer.cs">
+      <DependentUpon>EditCompetition.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditJudge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,8 +169,20 @@
     <Compile Include="Sportsman.cs" />
     <Compile Include="SudsDb.cs" />
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="AddCompetition.resx">
+      <DependentUpon>AddCompetition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddKindOfSport.resx">
       <DependentUpon>AddKindOfSport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompetitionForm.resx">
+      <DependentUpon>CompetitionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCompetition.resx">
+      <DependentUpon>EditCompetition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditJudge.resx">
       <DependentUpon>EditJudge.cs</DependentUpon>
