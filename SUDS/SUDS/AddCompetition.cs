@@ -14,6 +14,8 @@ namespace SUDS
     public partial class AddCompetition : Form
     {
         public SudsDb db { get; set; }
+        public Competition comp { get; set; }
+
         public string judge;
         public string sponsor;
         public string kindofsport;
@@ -25,35 +27,38 @@ namespace SUDS
 
         private void Add_Click(object sender, EventArgs e)
         {
-            if (KoS.SelectedItem != null || Jud.SelectedItem != null || Spo.SelectedItem != null)
+            if (KoS.SelectedItem != null /*&& Jud.SelectedItem != null && Spo.SelectedItem != null*/)
             {
+                KindOfSport kindOfSport = null;
                 Boolean exist = false;
-                judge = Jud.SelectedItem.ToString();
-                sponsor = Spo.SelectedItem.ToString();
+                //judge = Jud.SelectedItem.ToString();
+                //sponsor = Spo.SelectedItem.ToString();
                 kindofsport = KoS.SelectedItem.ToString();
+                foreach (KindOfSport kind in db.KindsOfSport)
+                {
+                    if (kind.NameOfSport.Equals(kindofsport))
+                        kindOfSport = kind;
+                }
                 Competition newData = new Competition()
                 {
                     Date = dateTimePicker1.Value,
-                    /*Judges = (from Competition in db.Competitions where Competition.Judges == judge select Competition).FirstOrDefault<Competition>(),
-                    Sponsor = (from Competition in db.Competitions where Competition.Sponsor == sponsor select Competition).FirstOrDefault<Competition>(),
-                    KindOfSport = (from Competition in db.Competitions where Competition.KindOfSport == kindofsport select Competition).FirstOrDefault<Competition>()
-                    */
+                    KindOfSport = kindOfSport,
                 };
                 foreach (Competition com in db.Competitions)
                 {
                     if (com.Date.Equals(newData.Date))
                     {
-                        if (com.Judges.Equals(newData.Judges))
+                        /*if (com.Judges.Equals(newData.Judges))
                         {
                             if (com.Sponsor.Equals(newData.Sponsor))
-                            {
+                            {*/
                                 if (com.KindOfSport.Equals(newData.KindOfSport))
                                 {
                                     exist = true;
                                     break;
                                 }
-                            }
-                        }
+                            /*}
+                        }*/
                     }
                 }
                 if (!exist)

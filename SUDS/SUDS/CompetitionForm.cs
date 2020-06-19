@@ -53,12 +53,44 @@ namespace SUDS
 
         private void Edit_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count >= 1)
+            {
+                EditCompetition form = new EditCompetition();
+                form.db = db;
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
+                Competition competition = (from Competition in db.Competitions
+                                  where Competition.Id == id
+                                  select Competition).FirstOrDefault<Competition>();
+                form.competition = competition;
+                form.ShowDialog();
+                loadData();
+            }
+            else
+            {
+                MessageBox.Show("Выделите строку с соревнованием!");
+            }
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Вы действительно хотите удалить выбранное соревнование?", "Удалить", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                    Competition competition = (from Competition in db.Competitions
+                                               where Competition.Id == id
+                                               select Competition).FirstOrDefault<Competition>();
+                    db.Competitions.Remove(competition);
+                    db.SaveChanges();
+                    loadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выделите строку с соревнованием!");
+            }
         }
 
         private void Search_Click(object sender, EventArgs e)

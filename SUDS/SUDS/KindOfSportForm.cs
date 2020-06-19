@@ -49,7 +49,7 @@ namespace SUDS
                 form.db = db;
                 int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
-               KindOfSport ks = (from KindOfSport in db.KindsOfSport
+                KindOfSport ks = (from KindOfSport in db.KindsOfSport
                            where KindOfSport.Id == id
                            select KindOfSport).FirstOrDefault<KindOfSport>();
                 Category cat = (from KindOfSport in db.KindsOfSport
