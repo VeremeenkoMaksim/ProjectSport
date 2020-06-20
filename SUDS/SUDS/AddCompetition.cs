@@ -27,6 +27,10 @@ namespace SUDS
 
         private void Add_Click(object sender, EventArgs e)
         {
+            string datewt = dateTimePicker1.Value.Date.ToShortDateString();
+            string date0 = datewt + " 0:00:00";
+            DateTime date;
+            DateTime.TryParse(date0, out date);
             if (KoS.SelectedItem != null /*&& Jud.SelectedItem != null && Spo.SelectedItem != null*/)
             {
                 KindOfSport kindOfSport = null;
@@ -41,7 +45,7 @@ namespace SUDS
                 }
                 Competition newData = new Competition()
                 {
-                    Date = dateTimePicker1.Value,
+                    Date = date,
                     KindOfSport = kindOfSport,
                 };
                 foreach (Competition com in db.Competitions)

@@ -13,6 +13,7 @@ namespace SUDS
     public partial class CompetitionForm : Form
     {
         public SudsDb db { get; set; }
+        public Competition competition { get; set; }
         public CompetitionForm()
         {
             InitializeComponent();
@@ -32,6 +33,10 @@ namespace SUDS
         private void CompetitionForm_Load(object sender, EventArgs e)
         {
             loadData();
+            foreach (KindOfSport kos in db.KindsOfSport)
+            {
+                KoS.Items.Add(kos.NameOfSport);
+            }
         }
         private void loadData()
         {
@@ -95,7 +100,29 @@ namespace SUDS
 
         private void Search_Click(object sender, EventArgs e)
         {
+            if (KoS.SelectedItem != null)
+            {
+                int count = dataGridView1.SelectedRows.Count;
+                for (int i = 0; i < count; i++)
+                {
+                    dataGridView1.SelectedRows[0].Selected = false;
+                }
 
+                string datewt = dateTimePicker1.Value.Date.ToShortDateString();
+                string date0 = datewt + " 0:00:00";
+                DateTime date;
+                DateTime.TryParse(date0, out date);
+                string name = KoS.SelectedItem.ToString();
+                Competition competition = (from Competition in db.Competitions
+                               where Competition.Date == date && Competition.KindOfSport.NameOfSport == name
+                               select Competition).FirstOrDefault<Competition>();
+                if (competition != null)
+                {
+                    for (int i = 0; i < dataGridView1.RowCount; i++)
+                        if (Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value) == competition.Id)
+                            dataGridView1.Rows[i].Selected = true;
+                }
+            }
         }
     }
 }

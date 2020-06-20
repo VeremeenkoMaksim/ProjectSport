@@ -28,20 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Search = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Edit = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.KoS = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // Search
             // 
-            this.Search.Location = new System.Drawing.Point(588, 189);
+            this.Search.Location = new System.Drawing.Point(311, 373);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(117, 30);
+            this.Search.Size = new System.Drawing.Size(121, 33);
             this.Search.TabIndex = 17;
             this.Search.Text = "Поиск";
             this.Search.UseVisualStyleBackColor = true;
@@ -95,11 +100,28 @@
             this.dataGridView1.Size = new System.Drawing.Size(541, 325);
             this.dataGridView1.TabIndex = 12;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(134, 362);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(160, 20);
+            this.dateTimePicker1.TabIndex = 19;
+            // 
+            // KoS
+            // 
+            this.KoS.FormattingEnabled = true;
+            this.KoS.Location = new System.Drawing.Point(134, 402);
+            this.KoS.Name = "KoS";
+            this.KoS.Size = new System.Drawing.Size(160, 21);
+            this.KoS.TabIndex = 20;
+            // 
             // CompetitionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 443);
+            this.Controls.Add(this.KoS);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Edit);
@@ -110,6 +132,7 @@
             this.Text = "CompetitionForm";
             this.Load += new System.EventHandler(this.CompetitionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +145,8 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox KoS;
     }
 }
