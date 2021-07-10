@@ -6,14 +6,15 @@
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{86DF32FA-63F2-4459-9A88-35DB76106FA4}" Loaded="No" Name="RequirementsModel_1" Type="{DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33}" URL="RequirementsModel_111 (1).rqm"/>
 		<Model ID="{EBF04A8E-E33F-44AD-AA26-6AFD8C72E999}" Loaded="No" Name="StateChart Diagram" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="StateChart Diagram.oom"/>
-		<Model ID="{BCBB35D5-2DC2-43E8-AB87-63314D01E1A5}" Name="ObjectOrientedModel_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ObjectOrientedModel_2.oom"/>
-		<Model Expanded="Yes" ID="{10ABD54A-3F9C-4F9C-97EC-B0A629D6562C}" Name="loginJudge" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="loginJudge.oom"/>
+		<Model ID="{BCBB35D5-2DC2-43E8-AB87-63314D01E1A5}" Loaded="No" Name="ObjectOrientedModel_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ObjectOrientedModel_2.oom"/>
+		<Model Expanded="Yes" ID="{10ABD54A-3F9C-4F9C-97EC-B0A629D6562C}" Loaded="No" Name="loginJudge" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="loginJudge.oom"/>
 		<Model Expanded="Yes" ID="{EBFC3EAD-53D2-41E4-9470-19A025D9488F}" Loaded="No" Name="SequenceDiagram" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="AddSportType.oom"/>
 		<Model ID="{C5D0FDE2-BBA4-4AE2-B2E8-A40236C6B46F}" Loaded="No" Name="EnterpriseArchitectureModel_1" Type="{5215C79E-A9A1-4738-A627-36DA432EFE29}" URL="EnterpriseArchitectureModel_2.eam"/>
 		<Model ID="{C5D0FDE2-BBA4-4AE2-B2E8-A40236C6B46F}" Loaded="No" Name="EnterpriseArchitectureModel_1" Type="{5215C79E-A9A1-4738-A627-36DA432EFE29}" URL="EnterpriseArchitectureModel_1.eam"/>
 		<Model ID="{C5D0FDE2-BBA4-4AE2-B2E8-A40236C6B46F}" Loaded="No" Name="EnterpriseArchitectureModel_1" Type="{5215C79E-A9A1-4738-A627-36DA432EFE29}" URL="EnterpriseArchitectureModel_2.eam"/>
 		<Model Expanded="Yes" ID="{843E137E-C289-4136-8FBC-2C1B5E914668}" Loaded="No" Name="ObjectOrientedModel_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../projectsport/class model.oom"/>
-		<Model ID="{EBFC3EAD-53D2-41E4-9470-19A025D9488F}" Name="SequenceDiagram" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="AddSportType.oom"/>
+		<Model ID="{EBFC3EAD-53D2-41E4-9470-19A025D9488F}" Loaded="No" Name="SequenceDiagram" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="AddSportType.oom"/>
+		<Model ID="{83CB9F33-56D0-43D2-A296-F241776D0DD2}" Name="Project_1" Selected="Yes" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="file:///D|/PowerDesigner projects/Project_1/Project_1.prj"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>

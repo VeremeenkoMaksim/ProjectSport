@@ -31,9 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видыСпортаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.спортсменыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.организаторыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.судьиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.соревнованиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,9 @@
             // менюToolStripMenuItem
             // 
             this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.видыСпортаToolStripMenuItem});
+            this.видыСпортаToolStripMenuItem,
+            this.спортсменыToolStripMenuItem,
+            this.соревнованиеToolStripMenuItem});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.менюToolStripMenuItem.Text = "Меню";
@@ -59,9 +63,16 @@
             // видыСпортаToolStripMenuItem
             // 
             this.видыСпортаToolStripMenuItem.Name = "видыСпортаToolStripMenuItem";
-            this.видыСпортаToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.видыСпортаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.видыСпортаToolStripMenuItem.Text = "Виды спорта";
             this.видыСпортаToolStripMenuItem.Click += new System.EventHandler(this.видыСпортаToolStripMenuItem_Click);
+            // 
+            // спортсменыToolStripMenuItem
+            // 
+            this.спортсменыToolStripMenuItem.Name = "спортсменыToolStripMenuItem";
+            this.спортсменыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.спортсменыToolStripMenuItem.Text = "Спортсмены";
+            this.спортсменыToolStripMenuItem.Click += new System.EventHandler(this.спортсменыToolStripMenuItem_Click);
             // 
             // пользовательToolStripMenuItem
             // 
@@ -75,16 +86,23 @@
             // организаторыToolStripMenuItem
             // 
             this.организаторыToolStripMenuItem.Name = "организаторыToolStripMenuItem";
-            this.организаторыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.организаторыToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.организаторыToolStripMenuItem.Text = "Организаторы";
             this.организаторыToolStripMenuItem.Click += new System.EventHandler(this.организаторыToolStripMenuItem_Click);
             // 
             // судьиToolStripMenuItem
             // 
             this.судьиToolStripMenuItem.Name = "судьиToolStripMenuItem";
-            this.судьиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.судьиToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.судьиToolStripMenuItem.Text = "Судьи";
             this.судьиToolStripMenuItem.Click += new System.EventHandler(this.судьиToolStripMenuItem_Click);
+            // 
+            // соревнованиеToolStripMenuItem
+            // 
+            this.соревнованиеToolStripMenuItem.Name = "соревнованиеToolStripMenuItem";
+            this.соревнованиеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.соревнованиеToolStripMenuItem.Text = "Соревнование";
+            this.соревнованиеToolStripMenuItem.Click += new System.EventHandler(this.соревнованиеToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -111,6 +129,8 @@
         private System.Windows.Forms.ToolStripMenuItem пользовательToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem организаторыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem судьиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem спортсменыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem соревнованиеToolStripMenuItem;
     }
 }
 

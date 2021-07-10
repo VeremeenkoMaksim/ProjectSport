@@ -21,6 +21,19 @@ namespace SUDS
         private void Form1_Load(object sender, EventArgs e)
         {
             db = new SudsDb();
+            Competition comp = new Competition();
+            comp = (from Competition in db.Competitions
+                    where Competition.Id == 1
+                    select Competition).FirstOrDefault<Competition>();
+            User judge = new User();
+            judge = (from User in db.Users
+                     where User.Id == 16
+                     select User).FirstOrDefault<User>();
+            CompetitionJudges cj = new CompetitionJudges();
+            cj.JudgeId = judge.Id;
+            cj.CompetitionId = comp.Id;
+            db.CompetitionJudges.Add(cj);
+            db.SaveChanges();
         }
 
         private void видыСпортаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +54,20 @@ namespace SUDS
         {
             SponsorForm form = new SponsorForm();
             form.db = db;
+            form.ShowDialog();
+        }
+
+        private void спортсменыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SportsmanForm form = new SportsmanForm();
+            form.db = db;
+            form.ShowDialog();
+        }
+
+        private void соревнованиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CompetitionForm form = new CompetitionForm();
+            //form.db = db;
             form.ShowDialog();
         }
     }

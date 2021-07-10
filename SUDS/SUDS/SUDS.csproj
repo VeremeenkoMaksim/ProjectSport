@@ -60,8 +60,20 @@
     <Compile Include="AddKindOfSport.Designer.cs">
       <DependentUpon>AddKindOfSport.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSportsman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSportsman.Designer.cs">
+      <DependentUpon>AddSportsman.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="Competition.cs" />
+    <Compile Include="CompetitionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompetitionForm.Designer.cs">
+      <DependentUpon>CompetitionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompetitionJudges.cs" />
     <Compile Include="CompetitionSponsors.cs" />
     <Compile Include="EditJudge.cs">
@@ -81,6 +93,12 @@
     </Compile>
     <Compile Include="EditSponsor.Designer.cs">
       <DependentUpon>EditSponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSportsman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSportsman.Designer.cs">
+      <DependentUpon>EditSportsman.cs</DependentUpon>
     </Compile>
     <Compile Include="JudgeForm.cs">
       <SubType>Form</SubType>
@@ -125,6 +143,10 @@
     <Compile Include="Migrations\202004301146309_Edit_Category.designer.cs">
       <DependentUpon>202004301146309_Edit_Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006240726295_changeContext.cs" />
+    <Compile Include="Migrations\202006240726295_changeContext.designer.cs">
+      <DependentUpon>202006240726295_changeContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -143,10 +165,22 @@
       <DependentUpon>SponsorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sportsman.cs" />
+    <Compile Include="SportsmanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SportsmanForm.Designer.cs">
+      <DependentUpon>SportsmanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SudsDb.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AddKindOfSport.resx">
       <DependentUpon>AddKindOfSport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSportsman.resx">
+      <DependentUpon>AddSportsman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompetitionForm.resx">
+      <DependentUpon>CompetitionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditJudge.resx">
       <DependentUpon>EditJudge.cs</DependentUpon>
@@ -156,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditSponsor.resx">
       <DependentUpon>EditSponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSportsman.resx">
+      <DependentUpon>EditSportsman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JudgeForm.resx">
       <DependentUpon>JudgeForm.cs</DependentUpon>
@@ -181,6 +218,9 @@
     <EmbeddedResource Include="Migrations\202004301146309_Edit_Category.resx">
       <DependentUpon>202004301146309_Edit_Category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006240726295_changeContext.resx">
+      <DependentUpon>202006240726295_changeContext.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -195,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SponsorForm.resx">
       <DependentUpon>SponsorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SportsmanForm.resx">
+      <DependentUpon>SportsmanForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
