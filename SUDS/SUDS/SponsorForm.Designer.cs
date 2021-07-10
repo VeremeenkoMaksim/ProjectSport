@@ -84,6 +84,7 @@
             this.Exit.TabIndex = 7;
             this.Exit.Text = "Назад";
             this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // dataGridView1
             // 

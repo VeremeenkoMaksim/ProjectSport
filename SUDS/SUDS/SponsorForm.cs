@@ -83,5 +83,10 @@ namespace SUDS
                 MessageBox.Show("Выделите строку с видом спорта");
             }
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
